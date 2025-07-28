@@ -51,7 +51,7 @@ Este projeto foi desenvolvido como parte de um processo seletivo para a vaga de 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/SejaSenfio/2025.2-front-onboard_API
+   git clone https://github.com/SejaSenfio/2025.2-front-onboard_API.git challenge-backend
    ```
 
 2. Dentro do projeto há o arquivo README.md, que contém as instruções de como rodar o projeto
@@ -97,6 +97,12 @@ Este projeto foi desenvolvido como parte de um processo seletivo para a vaga de 
 - Integração CI com GitHub Actions
 - Scripts de lint, format, testes e build configurados
 - Utilização de Docker e Docker Compose
+
+---
+
+## 📝 Entrega
+
+- Para realizar a entrega, basta clonar(não utilize fork) o repositório e, ao finalizar o desafio, publicá-lo em seu perfil do GitHub. Após isso, envie o link do seu repositório para o contato previamente informado.
 
 ---
 Feito com ❤️ para a oportunidade de fazer parte da equipe!
