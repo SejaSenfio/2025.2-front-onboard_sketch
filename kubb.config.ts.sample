@@ -1,0 +1,49 @@
+import { defineConfig } from '@kubb/core'
+import { pluginOas } from '@kubb/plugin-oas'
+import { pluginClient } from '@kubb/plugin-client'
+import { pluginTs } from '@kubb/plugin-ts'
+import { pluginReactQuery } from '@kubb/plugin-react-query'
+
+export default defineConfig(() => {
+  return {
+    input: {
+      path: './schema.yaml',
+    },
+    output: {
+      path: './src/http/generated',
+      clean: true,
+    },
+    plugins: [
+      pluginOas({
+        generators: [],
+        validate: false,
+      }),
+      pluginTs({
+        output: {
+          path: 'models',
+        },
+      }),
+      pluginClient({
+        output: {
+          path: '.',
+        },
+        importPath: '../client.ts',
+        dataReturnType: 'full',
+        pathParamsType: 'object',
+      }),
+      pluginReactQuery({
+        output: {
+          path: './hooks',
+        },
+        paramsType: 'inline',
+        pathParamsType: 'object',
+        suspense: false,
+
+        client: {
+          dataReturnType: 'full',
+          importPath: '../../client.ts',
+        },
+      }),
+    ],
+  }
+})
